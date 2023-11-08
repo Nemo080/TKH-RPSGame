@@ -98,7 +98,7 @@ function compareChoice (getUserChoice, getComputerChoice){
 function playGame () {
   alert("Let's play Rock, Paper, Scissors!");
   // used ChatGPT to understand how to code a round counter and the while loop
-  while(round < 5 && userScore < 2 && computerScore < 2) {
+  while(round < 5 && userScore < 5 && computerScore < 5) {
     round++;
     alert("This is round #" + round);
     let userChoice = getUserChoice();
@@ -107,10 +107,10 @@ function playGame () {
   }
 
   if (userScore > computerScore) {
-    alert("User wins!")
+    alert("User wins! Score is " + userScore)
   }
   else if (userScore < computerScore) {
-    alert("Computer wins!")
+    alert("Computer wins! Score is " + computerScore)
   }
   else {
     alert("It's a tie!")
